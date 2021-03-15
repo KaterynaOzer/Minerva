@@ -9,10 +9,12 @@ public class HomePage {
 
     public void CreateContributor(WebDriver driver) {
         this.driver = driver;
-}
-        private By CreateContributorButton = By.xpath("/html/body/div[2]/div/div/div/div/div[2]/ul/li[3]/a");
+    }
 
-        public Contributor clickCreateContributor() {
-            driver.findElement(CreateContributorButton).click();
-            return new Contributor(driver);
+    private By CreateContributorButton = By.xpath("/html/body/div[2]/div/div/div/div/div[2]/ul/li[3]/a");
+
+    public setUp.ContributorPage clickCreateContributor() {
+        driver.findElement(CreateContributorButton).click();
+        return new setUp.ContributorPage(driver);
+    }
 }

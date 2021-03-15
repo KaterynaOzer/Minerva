@@ -1,3 +1,5 @@
+package setUp;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class ContributorPage {
@@ -27,6 +29,7 @@ public class ContributorPage {
     private By photoCreditField = By.xpath("//*[@id=\"photo-credit\"]");
     private By saveButton = By.xpath ("//*[@id=\"dropzone-form\"]/input");
     private By uploadFilesLink = By.xpath("//*[@id=\"clickable-zone\"]");
+
     public ContributorPage setFirstName(String firstName) {
         driver.findElement(firstNameField).sendKeys(firstName);
         return this;
@@ -81,7 +84,6 @@ public class ContributorPage {
     }
     public ContributorPage clickAdd() {
         driver.findElement(addButton).click();
-        ///////////////////what to return?
         return this;
     }
     public ContributorPage setEmail(String email) {
@@ -110,12 +112,63 @@ public class ContributorPage {
     }
     public ContributorPage clickSave() {
         driver.findElement(saveButton).click();
-        //////return what?
         return this;
     }
     public ContributorPage clickUploadFiles() {
-        driver.findElement(uploadFilesLink).click();
-        ////////на линк тоже метод клик? что возвращать?
+        driver.findElement(uploadFilesLink).sendKeys("src/main/resources/profileAvatar.jpg");
         return this;
     }
+
+    public ContributorPage CreateAContributor (String firstName,
+                                               String lastName,
+                                               String middleName,
+                                               String academicQualification,
+                                               String dateOfBirth,
+                                               String royaltySystemId,
+                                               String bio){
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setMiddleName(middleName);
+        this.setAcademicQualification(academicQualification);
+        this.setDateOfBirth(dateOfBirth);
+        this.setRoyaltySystemId(royaltySystemId);
+        this.setBio(bio);
+        return this;
+        }
+    public ContributorPage ContactInformation (String mobileNumber,
+                                               String landLine,
+                                               String skype,
+                                               String fullAddress,
+                                               String city,
+                                               String country){
+        this.setMobileNumber(mobileNumber);
+        this.setLandline(landLine);
+        this.setSkype(skype);
+        this.setFullAddress(fullAddress);
+        this.setCity(city);
+        this.setCountry(country);
+        return this;
+    }
+    public ContributorPage Email (String email){
+        this.clickAdd();
+        this.setEmail(email);
+        return this;
+    }
+    public ContributorPage SocialNetworks(String facebook,
+                                          String instagram,
+                                          String twitter,
+                                          String website){
+        this.setFacebook(facebook);
+        this.setInstagram(instagram);
+        this.setTwitter(twitter);
+        this.setWebsite(website);
+        return this;
+    }
+    public ContributorPage AddPhoto (String photoCredit,
+                                     String fileWay){
+        this.setPhotoCredit(photoCredit);
+        this.clickUploadFiles();
+        return this;
+    }
+
 }

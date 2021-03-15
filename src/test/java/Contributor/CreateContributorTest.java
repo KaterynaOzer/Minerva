@@ -4,8 +4,11 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import setUp.ContributorPage;
 import setUp.FormManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import setUp.HomePage;
+
 import static java.lang.Thread.sleep;
 
 
@@ -31,11 +34,9 @@ public class CreateContributorTest {
 
     @Test
     public void myFirstTest(){
+
     }
     @Test
-
-
-
 
 
 

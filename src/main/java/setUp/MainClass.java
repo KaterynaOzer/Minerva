@@ -6,9 +6,6 @@ package setUp;
 public class MainClass {
     static WebDriver driver;
 
-    public MainClass() {
-    }
-
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();

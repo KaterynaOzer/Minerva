@@ -13,7 +13,8 @@ public class HomePage {
 
     private By CreateContributorButton = By.xpath("/html/body/div[2]/div/div/div/div/div[2]/ul/li[3]/a");
 
-    public setUp.ContributorPage clickCreateContributor() {
+    public setUp.ContributorPage clickCreateContributorButton() {
+
         driver.findElement(CreateContributorButton).click();
         return new setUp.ContributorPage(driver);
     }

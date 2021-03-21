@@ -12,6 +12,9 @@ public class HomePage {
     }
 
     private By CreateContributorButton = By.xpath("/html/body/div[2]/div/div/div/div/div[2]/ul/li[3]/a");
+    private By SearchField = By.xpath("/html/body/div[1]/div/div/div/form/div[1]/div/div/div/div/input");
+
+
 
     public setUp.ContributorPage clickCreateContributorButton() {
 

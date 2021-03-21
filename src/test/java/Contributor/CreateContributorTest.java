@@ -8,16 +8,16 @@ import static java.lang.Thread.sleep;
 
 
 public class CreateContributorTest {
-    private WebDriver driver;
-    static FormManager formManager;
-    private ContributorPage contributorPage;
+    private static WebDriver driver;
+    public  FormManager formManager;
+    private static ContributorPage contributorPage;
 
 
-    @Before
+    @BeforeClass
 
     public static void setUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("http://dev.watkins-minerva.com/login");
         FormManager formManager = new FormManager(driver);
         formManager.setField("//*[@id=\"username\"]", "kateryna.ozer@calaton.systems");
@@ -30,14 +30,14 @@ public class CreateContributorTest {
 
 
 
-    @After
-
-    public static void tearDown() {
-            if (driver != null) {
-                driver.quit();
-
-            }
-    }
+//    @AfterClass
+//
+//    public static void tearDown() {
+//            if (driver != null) {
+//                driver.quit();
+//
+//            }
+//    }
 
 
 
@@ -45,10 +45,15 @@ public class CreateContributorTest {
     public void myFirstTest() throws InterruptedException {
         Thread.sleep(10000);
         driver.get("http://dev.watkins-minerva.com/contributor/create");
-        contributorPage.CreateAContributor("Kateryna",
+        contributorPage = new ContributorPage(driver);
+        contributorPage.CreateContributor("Kateryna",
                 "Ozer","",
-                "", "03.10.1992",
-                "", "test");
+                "", "",
+                "","test");
         contributorPage.clickSave();
+
+        driver.get("http://dev.watkins-minerva.com/search");
+
+
     }
 }

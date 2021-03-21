@@ -1,8 +1,11 @@
 package setUp;
 
+import net.sourceforge.htmlunit.corejs.javascript.serialize.ScriptableOutputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 public class ContributorPage {
+
     private WebDriver driver;
     public ContributorPage(WebDriver driver){
         this.driver = driver;
@@ -30,102 +33,103 @@ public class ContributorPage {
     private By saveButton = By.xpath ("//*[@id=\"dropzone-form\"]/input");
     private By uploadFilesLink = By.xpath("//*[@id=\"clickable-zone\"]");
 
-    public ContributorPage setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         driver.findElement(firstNameField).sendKeys(firstName);
-        return this;
+        //return this;
     }
-    public ContributorPage setLastName(String lastName) {
+    public void setLastName(String lastName) {
         driver.findElement(lastNameField).sendKeys(lastName);
-        return this;
+        //return this;
     }
-    public ContributorPage setMiddleName(String middleName) {
+    public void setMiddleName(String middleName) {
         driver.findElement(middleNameField).sendKeys(middleName);
-        return this;
+        //return this;
     }
-    public ContributorPage setAcademicQualification(String academicQualification) {
+    public void setAcademicQualification(String academicQualification) {
         driver.findElement(academicQualificationField).sendKeys(academicQualification);
-        return this;
+        //return this;
     }
-    public ContributorPage setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         driver.findElement(dateOfBirthField).sendKeys(dateOfBirth);
-        return this;
+        //return this;
     }
-    public ContributorPage setRoyaltySystemId(String royaltySystemId) {
+    public void setRoyaltySystemId(String royaltySystemId) {
         driver.findElement(royaltySystemIdField).sendKeys(royaltySystemId);
-        return this;
+        //return this;
     }
-    public ContributorPage setBio(String bio) {
+    public void setBio(String bio) {
         driver.findElement(bioField).sendKeys(bio);
-        return this;
+        //return this;
     }
-    public ContributorPage setMobileNumber(String mobileNumber) {
+    public void setMobileNumber(String mobileNumber) {
         driver.findElement(mobileNumberField).sendKeys(mobileNumber);
-        return this;
+        //return this;
     }
-    public ContributorPage setLandline(String landline) {
+    public void setLandline(String landline) {
         driver.findElement(landlineField).sendKeys(landline);
-        return this;
+       //return this;
     }
-    public ContributorPage setSkype(String skype) {
+    public void setSkype(String skype) {
         driver.findElement(skypeField).sendKeys(skype);
-        return this;
+        //return this;
     }
-    public ContributorPage setFullAddress(String fullAddress) {
+    public void setFullAddress(String fullAddress) {
         driver.findElement(fullAddressField).sendKeys(fullAddress);
-        return this;
+        //return this;
     }
-    public ContributorPage setCity(String city) {
+    public void setCity(String city) {
         driver.findElement(cityField).sendKeys(city);
-        return this;
+        //return this;
     }
-    public ContributorPage setCountry(String country) {
+    public void setCountry(String country) {
         driver.findElement(countryField).sendKeys(country);
-        return this;
+        //return this;
     }
-    public ContributorPage clickAdd() {
+    public void clickAdd() {
         driver.findElement(addButton).click();
-        return this;
+        //return this;
     }
-    public ContributorPage setEmail(String email) {
+    public void setEmail(String email) {
         driver.findElement(emailField).sendKeys(email);
-        return this;
+        //return this;
     }
-    public ContributorPage setFacebook(String facebook) {
+    public void setFacebook(String facebook) {
         driver.findElement(facebookField).sendKeys(facebook);
-        return this;
+        //return this;
     }
-    public ContributorPage setInstagram(String instagram) {
+    public void setInstagram(String instagram) {
         driver.findElement(instagramField).sendKeys(instagram);
-        return this;
+        //return this;
     }
-    public ContributorPage setTwitter(String twitter) {
+    public void setTwitter(String twitter) {
         driver.findElement(twitterField).sendKeys(twitter);
-        return this;
+        //return this;
     }
-    public ContributorPage setWebsite(String website) {
+    public void setWebsite(String website) {
         driver.findElement(websiteField).sendKeys(website);
-        return this;
+        //return this;
     }
-    public ContributorPage setPhotoCredit(String photoCredit) {
+    public void setPhotoCredit(String photoCredit) {
         driver.findElement(photoCreditField).sendKeys(photoCredit);
-        return this;
+        //return this;
     }
-    public ContributorPage clickSave() {
+    public void clickSave() {
         driver.findElement(saveButton).click();
-        return this;
+       //return this;
     }
-    public ContributorPage clickUploadFiles() {
+    public void clickUploadFiles() {
         driver.findElement(uploadFilesLink).sendKeys("src/main/resources/profileAvatar.jpg");
-        return this;
+        //return this;
     }
 
-    public ContributorPage CreateAContributor (String firstName,
+    public void CreateContributor (String firstName,
                                                String lastName,
                                                String middleName,
                                                String academicQualification,
                                                String dateOfBirth,
                                                String royaltySystemId,
-                                               String bio){
+                                               String bio
+                                              ){
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setMiddleName(middleName);
@@ -133,9 +137,8 @@ public class ContributorPage {
         this.setDateOfBirth(dateOfBirth);
         this.setRoyaltySystemId(royaltySystemId);
         this.setBio(bio);
-        return this;
-        }
-    public ContributorPage ContactInformation (String mobileNumber,
+    }
+    public void ContactInformation (String mobileNumber,
                                                String landLine,
                                                String skype,
                                                String fullAddress,
@@ -147,14 +150,14 @@ public class ContributorPage {
         this.setFullAddress(fullAddress);
         this.setCity(city);
         this.setCountry(country);
-        return this;
+        //return this;
     }
-    public ContributorPage Email (String email){
+    public void Email (String email){
         this.clickAdd();
         this.setEmail(email);
-        return this;
+        //return this;
     }
-    public ContributorPage SocialNetworks(String facebook,
+    public void SocialNetworks(String facebook,
                                           String instagram,
                                           String twitter,
                                           String website){
@@ -162,13 +165,13 @@ public class ContributorPage {
         this.setInstagram(instagram);
         this.setTwitter(twitter);
         this.setWebsite(website);
-        return this;
+        //return this;
     }
-    public ContributorPage AddPhoto (String photoCredit,
+    public void AddPhoto (String photoCredit,
                                      String fileWay){
         this.setPhotoCredit(photoCredit);
         this.clickUploadFiles();
-        return this;
+        //return this;
     }
 
 }

@@ -37,22 +37,11 @@ public class AuditFixTest {
             String auditUrl = "http://dev.watkins-minerva.com/edition/" + editionNumber + "/audit";
             driver.get(auditUrl);
 
-
-            AuditPage auditPage = new AuditPage(driver);
-            //String heading = auditPage.getHeadingText();
             if (driver.getPageSource().contains("404")) {
-                System.out.println("404");
+                System.out.println("Edition number " + editionNumber + " : 404");
             } else {
-                System.out.println("works");
+                System.out.println("Edition number " + editionNumber + " : audit presents");
 
-//        if (heading.equals("Basic Info Changes")) {
-//            System.out.println("Audit works");
-//        } else {
-//            System.out.println("Audit 404");
-
-//            //Assert.assertEquals("Basic Info Changes", heading);
-//
-//        }
             }
         }
     }

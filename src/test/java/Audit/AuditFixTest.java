@@ -32,17 +32,11 @@ public class AuditFixTest {
 
     @Test
     public void AuditErrorTest() {
-        int[] editionNumbers = {3, 6, 1444};
-        for (int editionNumber : editionNumbers) {
-            String auditUrl = "http://dev.watkins-minerva.com/edition/" + editionNumber + "/audit";
-            driver.get(auditUrl);
-
-            if (driver.getPageSource().contains("404")) {
-                System.out.println("Edition number " + editionNumber + " : 404");
-            } else {
-                System.out.println("Edition number " + editionNumber + " : audit presents");
-
-            }
+        int[] editionNumbers = new int[]{3, 6, 1444};
+        for (int i = 0; i < editionNumbers.length; i++) {
+            driver.get("http://dev.watkins-minerva.com/edition/" + editionNumbers[i] + "/audit");
+            String status = driver.getPageSource().contains("404") ? " doesn't work" : " works";
+            System.out.println("Edition " + editionNumbers[i] + status);
         }
     }
 }

@@ -28,5 +28,7 @@ public class FormManager {
         WebElement selector = driver.findElement(By.xpath(selectorXPath));
         selector.sendKeys(selectorValue);
     }
-
+    public String getErrorText(String errorTextXpath){
+        return driver.findElement(By.xpath(errorTextXpath)).getText();
+    }
 }

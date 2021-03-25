@@ -23,9 +23,6 @@ public class AuditPage {
     }
 
 
-//        int editionNumber = 6;
-//        String auditUrl = "http://dev.watkins-minerva.com/edition/" + editionNumber + "/audit";
-
 
 
 

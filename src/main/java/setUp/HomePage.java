@@ -16,9 +16,9 @@ public class HomePage {
 
 
 
-    public setUp.ContributorPage clickCreateContributorButton() {
-
-        driver.findElement(CreateContributorButton).click();
-        return new setUp.ContributorPage(driver);
-    }
+//    public setUp.ContributorPage clickCreateContributorButton() {
+//
+//        driver.findElement(CreateContributorButton).click();
+//        return new setUp.ContributorPage(driver);
+//    }
 }

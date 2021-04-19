@@ -1,13 +1,11 @@
-package Audit;
+package audit;
 
-import AuditPage.AuditPage;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import setUp.ContributorPage;
-import setUp.FormManager;
+import contributor.ContributorPage;
+import edition.FormManager;
 
 public class AuditFixTest {
     private static WebDriver driver;
@@ -371,12 +369,11 @@ public class AuditFixTest {
                 17,
                 2893,
                 2936,
-                6
-        };
+                6};
         for(int i = 0; i < editionNumbers.length; i++) {
             driver.get("http://dev.watkins-minerva.com/edition/" + editionNumbers[i] + "/audit");
             String status = driver.getPageSource().contains("404") ? " doesn't work" : " works";
-            System.out.println("Edition " + editionNumbers[i] + status);
+            System.out.println("edition " + editionNumbers[i] + status);
         }
     }
 }

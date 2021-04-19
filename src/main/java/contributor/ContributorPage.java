@@ -1,6 +1,5 @@
-package setUp;
+package contributor;
 
-import net.sourceforge.htmlunit.corejs.javascript.serialize.ScriptableOutputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -33,92 +32,91 @@ public class ContributorPage {
     private By websiteField = By.xpath("//*[@id=\"website\"]");
     private By photoCreditField = By.xpath("//*[@id=\"photo-credit\"]");
     private By saveButton = By.xpath("//*[@id=\"dropzone-form\"]/input");
-    private By uploadFilesLink = By.xpath("//*[@id=\"clickable-zone\"]");
-////*[@id="clickable-zone"]
-    ////*[@id="clickable-zone"]
+    private By uploadFilesLink = By.id("clickable-zone");
+
     public void setFirstName(String firstName) {
         driver.findElement(firstNameField).sendKeys(firstName);
-        //return this;
+
     }
 
     public void setLastName(String lastName) {
         driver.findElement(lastNameField).sendKeys(lastName);
-        //return this;
+
     }
 
     public void setMiddleName(String middleName) {
         driver.findElement(middleNameField).sendKeys(middleName);
-        //return this;
+
     }
 
     public void setAcademicQualification(String academicQualification) {
         driver.findElement(academicQualificationField).sendKeys(academicQualification);
-        //return this;
+
     }
 
     public void setDateOfBirth(String dateOfBirth) {
         driver.findElement(dateOfBirthField).sendKeys(dateOfBirth);
-        //return this;
+
     }
 
     public void setRoyaltySystemId(String royaltySystemId) {
         driver.findElement(royaltySystemIdField).sendKeys(royaltySystemId);
-        //return this;
+
     }
 
     public void setBio(String bio) {
         driver.findElement(bioField).sendKeys(bio);
-        //return this;
+
     }
 
     public void setMobileNumber(String mobileNumber) {
         driver.findElement(mobileNumberField).sendKeys(mobileNumber);
-        //return this;
+
     }
 
     public void setLandline(String landline) {
         driver.findElement(landlineField).sendKeys(landline);
-        //return this;
+
     }
 
     public void setSkype(String skype) {
         driver.findElement(skypeField).sendKeys(skype);
-        //return this;
+
     }
 
     public void setFullAddress(String fullAddress) {
         driver.findElement(fullAddressField).sendKeys(fullAddress);
-        //return this;
+
     }
 
     public void setCity(String city) {
         driver.findElement(cityField).sendKeys(city);
-        //return this;
+
     }
 
     public void setCountry(String country) {
         driver.findElement(countryField).sendKeys(country);
-        //return this;
+
     }
 
     public void clickAdd() {
         driver.findElement(addButton).click();
-        //return this;
+
     }
 
     public void setEmail(String email) {
         driver.findElement(emailField).sendKeys(email);
-        //return this;
+
     }
 
     public void setFacebook(String facebook) {
         driver.findElement(facebookField).sendKeys(facebook);
-        //return this;
+
     }
 
     public void setInstagram(String instagram) {
         driver.findElement(instagramField).sendKeys(instagram);
-        //return this;
+
     }
 
     public void setTwitter(String twitter) {
@@ -128,22 +126,22 @@ public class ContributorPage {
 
     public void setWebsite(String website) {
         driver.findElement(websiteField).sendKeys(website);
-        //return this;
+
     }
 
     public void setPhotoCredit(String photoCredit) {
         driver.findElement(photoCreditField).sendKeys(photoCredit);
-        //return this;
+
     }
 
     public void clickSave() {
         driver.findElement(saveButton).click();
-        //return this;
+
     }
 
     public void clickUploadFiles() {
         driver.findElement(uploadFilesLink).sendKeys("src/main/resources/profileAvatar.jpg");
-        //return this;
+
     }
 
     public void CreateContributor(String firstName,
@@ -175,13 +173,13 @@ public class ContributorPage {
         this.setFullAddress(fullAddress);
         this.setCity(city);
         this.setCountry(country);
-        //return this;
+
     }
 
     public void Email(String email) {
         this.clickAdd();
         this.setEmail(email);
-        //return this;
+
     }
 
     public void SocialNetworks(String facebook,

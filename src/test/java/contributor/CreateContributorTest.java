@@ -1,12 +1,11 @@
-package Contributor;
+package contributor;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import setUp.ContributorPage;
-import setUp.FormManager;
+import edition.FormManager;
 import org.openqa.selenium.chrome.ChromeDriver;
-import setUp.HomePage;
 
 import static java.lang.Thread.sleep;
 
@@ -15,7 +14,6 @@ public class CreateContributorTest {
     private static WebDriver driver;
     public FormManager formManager;
     private static ContributorPage contributorPage;
-
 
 
     @BeforeClass
@@ -57,10 +55,16 @@ public class CreateContributorTest {
                 "twitter",
                 "mywebsite");
         contributorPage.PhotoCredit("text");
-//        contributorPage.UploadPhoto();
-//        Thread.sleep(1000);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("clickable-zone")));
+        contributorPage.clickUploadFiles();
+        Thread.sleep(6000);
         contributorPage.clickSave();
-
+        driver.switchTo().frame(0);
+        driver.findElement(By.xpath("//body[@class=\"form-control col-sm-8 expand rich-editor wysihtml5-editor\"]")).sendKeys("bio");
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(1);
+        driver.findElement(By.id("clickable-zone")).click();
     }
 
     @AfterClass
@@ -81,10 +85,16 @@ public class CreateContributorTest {
         String warning = formManager.getErrorText("/html/body/div[1]/div/div/div/form/div/div/div[2]/div[1]");
         Assert.assertEquals("Nothing found.", warning);
 
-        }
-
-    public void tearDown(){
-        driver.quit();
     }
 
-   }
+
+//        public static void tearDown () {
+//            if (driver != null) {
+//                driver.quit();
+//            }
+//
+//        }
+
+}
+
+

@@ -18,9 +18,4 @@ public class AuditPage {
         return driver.findElement(heading).getText();
     }
 
-
-
-
-
-
 }

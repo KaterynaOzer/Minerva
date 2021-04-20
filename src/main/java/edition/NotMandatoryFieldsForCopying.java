@@ -145,7 +145,7 @@ public class NotMandatoryFieldsForCopying {
         }
         Select previousEditionDropdown = new Select(driver.findElement(PreviousEditionDropdown));
         String selectedOptionPreviousEditionDropdown = previousEditionDropdown.getFirstSelectedOption().getText();
-        if (selectedOptionPreviousEditionDropdown != null) {
+        if (selectedOptionPreviousEditionDropdown == null) {
             System.out.println("PreviousEditionDropdown failed");
         }
         By[] textFieldsElements = new By[]{MarketingPointsField, PublicityPointsField, ReprintNotesField,

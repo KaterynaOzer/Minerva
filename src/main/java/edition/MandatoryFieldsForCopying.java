@@ -194,54 +194,54 @@ public class MandatoryFieldsForCopying {
 
         Select imprintDropdown = new Select(driver.findElement(ImprintDropDown));
         String selectedOptionImprint = imprintDropdown.getFirstSelectedOption().getText();
-        if (selectedOptionImprint.equals("Repeater")) {
+        if (!selectedOptionImprint.equals("Repeater")) {
             System.out.println("Imprint failed");
 
         }
         Select languageDropdown = new Select(driver.findElement(LanguageDropdown));
         String selectedOptionLanguage = languageDropdown.getFirstSelectedOption().getText();
-        if (selectedOptionLanguage.equals("German")) {
+        if (!selectedOptionLanguage.equals("German")) {
             System.out.println("Language failed");
         }
         Select bicSubject1Dropdown = new Select(driver.findElement(BICSubjects1Dropdown));
         String selectedOptionBicSubject1 = bicSubject1Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBicSubject1.equals("African history")) {
+        if (!selectedOptionBicSubject1.equals("African history")) {
             System.out.println("BICSubjects1Dropdown failed");
         }
         Select bicSubject2Dropdown = new Select(driver.findElement(BICSubjects2Dropdown));
         String selectedOptionBicSubject2 = bicSubject2Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBicSubject2.equals("African history")) {
+        if (!selectedOptionBicSubject2.equals("African history")) {
             System.out.println("BICSubjects2Dropdown failed");
         }
         Select bicSubject3Dropdown = new Select(driver.findElement(BICSubjects3Dropdown));
         String selectedOptionBicSubject3 = bicSubject3Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBicSubject3.equals("African history")) {
+        if (!selectedOptionBicSubject3.equals("African history")) {
             System.out.println("BICSubjects3Dropdown failed");
         }
 
         Select bisacSubject1Dropdown = new Select(driver.findElement(BISACSubjects1Dropdown));
         String selectedOptionBisacSubject1 = bisacSubject1Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBisacSubject1.equals("ARCHITECTURE / Buildings / Religious")) {
+        if (!selectedOptionBisacSubject1.equals("ARCHITECTURE / Buildings / Religious")) {
             System.out.println("BISACSubjects1Dropdown failed");
         }
         Select bisacSubject2Dropdown = new Select(driver.findElement(BISACSubjects2Dropdown));
         String selectedOptionBisacSubject2 = bisacSubject2Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBisacSubject2.equals("ARCHITECTURE / Buildings / Religious")) {
+        if (!selectedOptionBisacSubject2.equals("ARCHITECTURE / Buildings / Religious")) {
             System.out.println("BISACSubjects2Dropdown failed");
         }
         Select bisacSubject3Dropdown = new Select(driver.findElement(BISACSubjects3Dropdown));
         String selectedOptionBisacSubject3 = bisacSubject3Dropdown.getFirstSelectedOption().getText();
-        if (selectedOptionBisacSubject3.equals("ARCHITECTURE / Buildings / Religious")) {
+        if (!selectedOptionBisacSubject3.equals("ARCHITECTURE / Buildings / Religious")) {
             System.out.println("BISACSubjects3Dropdown failed");
         }
         Select diversityDiversityDropdown = new Select(driver.findElement(DiversityDiscoverabilityDiversityCategoriesDropdown));
         String selectedOptiondiversityDiversity = diversityDiversityDropdown.getFirstSelectedOption().getText();
-        if (selectedOptiondiversityDiversity.equals("Disability, Impairment, and Difference - Addiction - Alcohol Addiction")) {
+        if (!selectedOptiondiversityDiversity.equals("Disability, Impairment, and Difference - Addiction - Alcohol Addiction")) {
             System.out.println("DiversityDiscoverabilityDiversityCategoriesDropdown failed");
         }
         Select diversityExperienceDropdown = new Select(driver.findElement(DiversityDiscoverabilityExperiencesCategoriesDropdown));
         String selectedOptiondiversityExperience = diversityExperienceDropdown.getFirstSelectedOption().getText();
-        if (selectedOptiondiversityExperience.equals("Disability, Impairment, and Difference - Addiction - Alcohol Addiction")) {
+        if (!selectedOptiondiversityExperience.equals("Family Structure - Adopted")) {
             System.out.println("DiversityDiscoverabilityExperiencesCategoriesDropdown failed");
         }
     }

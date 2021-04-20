@@ -30,19 +30,19 @@ public class AssertMandatoryFields {
         MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
         mandatoryFieldsForCopying.AssertMandatoryFieldsInRelatedEdition();
     }
-//    @Test
-//    public void checkOnixRelatedEdition(){
-//        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
-//        mandatoryFieldsForCopying.AssertMandatoryOnixFieldsInRelatedEdition();
-//    }
-//    @Test
-//    public void checkEndorsementsRelatedEdition(){
-//        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
-//        mandatoryFieldsForCopying.AssertMandatoryEndorsementFieldsInRelatedEdition();
-//    }
-//    @Test
-//    public void checkContributorsRelatedEdition(){
-//        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
-//        mandatoryFieldsForCopying.AssertMandatoryContributorFieldsInRelatedEdition();
-//    }
+    @Test
+    public void checkOnixRelatedEdition(){
+        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
+        mandatoryFieldsForCopying.AssertMandatoryOnixFieldsInRelatedEdition();
+    }
+    @Test
+    public void checkEndorsementsRelatedEdition(){
+        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
+        mandatoryFieldsForCopying.AssertMandatoryEndorsementFieldsInRelatedEdition();
+    }
+    @Test
+    public void checkContributorsRelatedEdition(){
+        MandatoryFieldsForCopying mandatoryFieldsForCopying = new MandatoryFieldsForCopying(driver);
+        mandatoryFieldsForCopying.AssertMandatoryContributorFieldsInRelatedEdition();
+    }
 }
